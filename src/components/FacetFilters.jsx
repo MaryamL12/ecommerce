@@ -43,7 +43,7 @@ export default function FacetFilters({
       </div>
 
       <p className="filter-help-tip">
-        Tip: pick more than one option in a category to see plants that match any of them. Combine categories (like Colour and Light Needs) to narrow things down further.
+        Tip: pick more than one option in a category to see products that match any of them. Combine categories to narrow things down further.
       </p>
 
       <div className="filter-row d-flex flex-wrap align-items-start">
