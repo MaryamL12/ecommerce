@@ -494,6 +494,15 @@ img { display: block; max-width: 100%; }
   text-transform: uppercase;
   color: #8C9E8A;
 }
+.filter-help-tip {
+  font-size: 0.8rem;
+  color: #6b7f69;
+  background: #E6F2EA;
+  border-radius: 8px;
+  padding: 0.5rem 0.85rem;
+  margin-bottom: 1rem;
+}
+
 .filter-clear {
   background: none;
   border: none;
@@ -675,6 +684,33 @@ textarea.pn-input { resize: vertical; min-height: 100px; }
 }
 .detail-fact .label { color: #6b7f69; }
 .detail-fact .value { font-weight: 600; color: #1C3829; }
+
+.faq-title { font-family: 'Sniglet', cursive; color: #1C3829; font-size: clamp(1.6rem,3vw,2.2rem); margin-bottom: 0.5rem; }
+.faq-intro { color: #6b7f69; margin-bottom: 1.75rem; }
+.faq-item { border-bottom: 1px solid #E6F2EA; }
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 1rem 0;
+  font-weight: 600;
+  color: #1C3829;
+  font-size: 1rem;
+}
+.faq-toggle { color: #4A7C59; font-size: 1.3rem; font-weight: 700; }
+.faq-answer { color: #6b7f69; line-height: 1.7; padding-bottom: 1rem; margin: 0; font-size: 0.92rem; }
+
+.care-tip {
+  font-size: 0.85rem;
+  color: #1C3829;
+  background: #F8F5EF;
+  border: 1px solid #E6F2EA;
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  margin-top: 1rem;
+}
+.care-tip-label { font-weight: 700; color: #4A7C59; }
 
 .detail-actions { margin-top: 1.5rem; }
 .detail-actions .qty-stepper { height: 52px; }

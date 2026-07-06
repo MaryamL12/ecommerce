@@ -22,6 +22,7 @@ export default function Footer() {
             <Link to="/shop" className="footer-link d-block">Shop All</Link>
             <Link to="/cart" className="footer-link d-block">Cart</Link>
             <Link to="/feedback" className="footer-link d-block">Feedback</Link>
+            <Link to="/faq" className="footer-link d-block">FAQ</Link>
           </div>
         </div>
       </div>

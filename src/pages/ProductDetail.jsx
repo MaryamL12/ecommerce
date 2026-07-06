@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import products, { getPriceInfo, categoryIcons } from "../data/products";
+import products, { getPriceInfo, careTipsByLight } from "../data/products";
 import { useCart } from "../context/CartContext";
 import Breadcrumb from "../components/Breadcrumb";
 import QuantityStepper from "../components/QuantityStepper";
@@ -12,7 +12,6 @@ export default function ProductDetail() {
   const product = products.find(p => p.id === Number(id));
   const [qty, setQty] = useState(1);
   const [toast, setToast] = useState(false);
-  const [imgErr, setImgErr] = useState(false);
 
   if (!product) return (
     <div className="pn-wrap text-center py-5">
@@ -52,10 +51,7 @@ export default function ProductDetail() {
       <Breadcrumb items={crumbs} />
       <div className="row g-4">
         <div className="col-12 col-lg-6">
-          {!imgErr
-            ? <img className="detail-img" src={product.image} alt={product.name} onError={() => setImgErr(true)} />
-            : <div className="detail-img-fallback d-flex align-items-center justify-content-center">{categoryIcons[product.category]}</div>
-          }
+          <img className="detail-img" src={product.image} alt={product.name} />
         </div>
         <div className="col-12 col-lg-6">
           <h1 className="detail-title">{product.name}</h1>
@@ -78,6 +74,12 @@ export default function ProductDetail() {
               </div>
             ))}
           </div>
+          {careTipsByLight[product.light] && (
+            <p className="care-tip">
+              <span className="care-tip-label">Care tip: </span>
+              {careTipsByLight[product.light]}
+            </p>
+          )}
           <div className="detail-actions d-flex align-items-center flex-wrap gap-3">
             <QuantityStepper value={qty} onChange={setQty} />
             <button className="btn-add-cart-lg" onClick={handleAdd}>Add to Cart</button>

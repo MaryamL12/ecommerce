@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
-import { getPriceInfo, categoryIcons } from "../data/products";
+import { getPriceInfo } from "../data/products";
 import QuantityStepper from "./QuantityStepper";
 import CartToast from "./CartToast";
 
@@ -9,7 +9,6 @@ export default function ProductCard({ product }) {
   const { addToCart } = useCart();
   const [qty, setQty] = useState(1);
   const [toast, setToast] = useState(false);
-  const [imgErr, setImgErr] = useState(false);
 
   const { onSale, original, sale } = getPriceInfo(product);
 
@@ -24,10 +23,7 @@ export default function ProductCard({ product }) {
       {toast && <CartToast product={product} onClose={() => setToast(false)} />}
       <div className="product-card h-100 d-flex flex-column">
         <Link to={`/product/${product.id}`} className="product-card-link" aria-label={product.name} />
-        {!imgErr
-          ? <img className="product-img" src={product.image} alt={product.name} loading="lazy" onError={() => setImgErr(true)} />
-          : <div className="product-img-fallback d-flex align-items-center justify-content-center">{categoryIcons[product.category] || "🌿"}</div>
-        }
+        <img className="product-img" src={product.image} alt={product.name} loading="lazy" />
         <div className="product-body d-flex flex-column flex-fill gap-2">
           <div className="product-group">{product.subcategory}</div>
           <div className="product-name">{product.name}</div>

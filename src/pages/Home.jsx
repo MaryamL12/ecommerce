@@ -6,7 +6,7 @@ const categoryImages = {
   Trees:   "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&fit=crop",
   Flowers: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=700&fit=crop",
   Food:    "https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=700&fit=crop",
-  Seeds:   "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=700&fit=crop",
+  Seeds:   "https://images.unsplash.com/photo-1613500788522-89c4d55bdd0e?w=700&fit=crop",
 };
 
 export default function Home() {

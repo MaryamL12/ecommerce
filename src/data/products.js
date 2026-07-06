@@ -367,7 +367,11 @@ export const categoryMenu = {
   Seeds:   ["Vegetable Seeds", "Flower Seeds", "Herb Seeds", "Tree Seeds"],
 };
 
-export const categoryIcons = { Trees:"🌳", Flowers:"🌸", Food:"🥕", Seeds:"🌱" };
+export const careTipsByLight = {
+  "Full Sun":      "This one likes at least 6 hours of direct light a day, so a south-facing spot works best.",
+  "Partial Shade": "Give this a few hours of direct light and shade for the rest of the day, an east or west-facing window is ideal.",
+  "Full Shade":    "This does well with little to no direct sun, so it's a good pick for a north-facing spot or a shadier corner.",
+};
 
 export const subcategoryFacetMap = {
   Trees: {

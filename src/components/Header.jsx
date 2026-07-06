@@ -50,6 +50,7 @@ export default function Header() {
             ))}
             <Link to="/shop" className={`pn-nav-link d-flex align-items-center ${location.pathname === "/shop" ? "is-active" : ""}`}>Shop All</Link>
             <Link to="/feedback" className={`pn-nav-link d-flex align-items-center ${location.pathname === "/feedback" ? "is-active" : ""}`}>Feedback</Link>
+            <Link to="/faq" className={`pn-nav-link d-flex align-items-center ${location.pathname === "/faq" ? "is-active" : ""}`}>FAQ</Link>
           </div>
 
           <form className="pn-search d-flex align-items-center" onSubmit={handleSearch}>

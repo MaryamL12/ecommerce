@@ -15,6 +15,7 @@ import CheckoutPayment from "./pages/CheckoutPayment";
 import CheckoutConfirmation from "./pages/CheckoutConfirmation";
 import Feedback from "./pages/Feedback";
 import SearchResults from "./pages/SearchResults";
+import FAQ from "./pages/FAQ";
 
 function ShopPage() {
   const location = useLocation();
@@ -56,6 +57,7 @@ export default function App() {
               <Route path="/checkout/payment" element={<CheckoutPayment />} />
               <Route path="/checkout/confirmation" element={<CheckoutConfirmation />} />
               <Route path="/feedback" element={<Feedback />} />
+              <Route path="/faq" element={<FAQ />} />
               <Route path="/search" element={<SearchPage />} />
             </Routes>
           </main>
